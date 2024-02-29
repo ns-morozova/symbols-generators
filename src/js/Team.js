@@ -12,10 +12,13 @@ export default class Team {
 
       *[Symbol.iterator]() {
         const charList = Array.from(this.members);
-        yield charList[0];
-        yield charList[1];
-        yield charList[2];
-        return charList[3];
+
+        for (let i = 0; i < charList.length; i++) {
+          yield charList[i];
+          if (i == charList.length - 1) {
+            return charList[i];
+          }
+        }
       }
 }
 
