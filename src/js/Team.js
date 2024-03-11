@@ -15,9 +15,6 @@ export default class Team {
 
         for (let i = 0; i < charList.length; i++) {
           yield charList[i];
-          if (i == charList.length - 1) {
-            return charList[i];
-          }
         }
       }
 }
